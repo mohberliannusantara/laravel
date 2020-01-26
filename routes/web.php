@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Auth::routes();
+
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// crud user
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/create', 'AdminController@create');
+Route::post('/admin/store', 'AdminController@store');
+Route::get('/admin/edit/{id}', 'AdminController@edit');
+Route::post('/admin/update', 'AdminController@update');
+Route::get('/admin/delete/{id}', 'AdminController@delete');
