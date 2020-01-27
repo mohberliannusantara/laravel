@@ -8,9 +8,8 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    <div>
+                    <div class="py-2">
                         <a class="btn btn-primary btn-sm" href="/admin/create">Tambah</a>
-
                     </div>
                     <table class="table table-bordered">
                         <tr>

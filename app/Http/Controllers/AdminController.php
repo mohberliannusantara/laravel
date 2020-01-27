@@ -23,7 +23,7 @@ class AdminController extends Controller
         DB::table('users')->insert([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => md5($request->password)
+            'password' => bcrypt($request->password)
         ]);
 
         return redirect('/admin');
